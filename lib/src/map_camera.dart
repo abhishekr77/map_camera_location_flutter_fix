@@ -224,6 +224,10 @@ class _MapCameraLocationState extends State<MapCameraLocation> {
                                                 ),
                                                 children: [
                                                   TileLayer(
+                                                    tileProvider:NetworkTileProvider(headers: {
+                                                    'User-Agent': 'MyFlutterMapApp/1.0 (contact@example.com)',
+                                                    'Referer': 'https://myapp.example.com'
+                                                    },),
                                                     urlTemplate:
                                                         'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                                                     userAgentPackageName:
